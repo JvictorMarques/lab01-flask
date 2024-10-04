@@ -5,6 +5,7 @@ Dockerfile
 .dockerignore
 README.md
 LICENSE
+.github/*
 
 /credentials
 /cache
