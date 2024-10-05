@@ -1,4 +1,4 @@
-name: "[CI] Flask Release"
+name: (CI) Flask Release
 
 on:
   workflow_dispatch:
@@ -26,9 +26,6 @@ jobs:
         id: cz
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Print Version
-        run: echo "Bumped to version ${{ steps.cz.outputs.version }}"
 
       - name: Generate TAG
         id: generate_tag
