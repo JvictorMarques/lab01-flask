@@ -1,4 +1,4 @@
-name: "[CI] Flask Build"
+name: (CI) Flask Build
 on:
   workflow_dispatch:
   pull_request:
