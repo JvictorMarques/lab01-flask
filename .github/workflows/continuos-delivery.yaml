@@ -14,7 +14,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Action | Semantic Version Release
+      - name: Action Semantic Version Release
         id: release
         uses: python-semantic-release/python-semantic-release@v9.9.0
         with:
