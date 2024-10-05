@@ -16,12 +16,14 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Action Semantic Version Release
-        id: release
-        uses: python-semantic-release/python-semantic-release@v9.9.0
+      - name: Create bump and changelog
+        uses: commitizen-tools/commitizen-action@master
+        id: cz
         with:
-          changelog: true
-          github_token: ${{ secrets.GH_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Print Version
+        run: echo "Bumped to version ${{ steps.cz.outputs.version }}"
 
       - name: Generate TAG
         id: generate_tag
@@ -40,5 +42,5 @@ jobs:
         with:
           push: true
           tags: |
-            jvictorsm/jvictorsm:${{ steps.release.outputs.version }}-python
+            jvictorsm/jvictorsm:${{ steps.cz.outputs.version }}-python
             jvictorsm/jvictorsm:${{ steps.generate_tag.outputs.sha }}-python
