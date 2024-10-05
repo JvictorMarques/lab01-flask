@@ -7,6 +7,11 @@ on:
       - main
       - homolog
       - develop
+permissions:
+  id-token: write
+  contents: write
+  issues: write
+  pull-requests: write
 
 jobs:
   release:
