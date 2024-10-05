@@ -20,7 +20,7 @@ jobs:
         uses: commitizen-tools/commitizen-action@master
         id: cz
         with:
-          github_token: ${{ secrets.GH_TOKEN2 }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Print Version
         run: echo "Bumped to version ${{ steps.cz.outputs.version }}"
