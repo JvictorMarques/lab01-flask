@@ -28,8 +28,8 @@ WORKDIR /app
 COPY --from=builder /usr/local/lib/python3.11/site-packages /usr/local/lib/python3.11/site-packages
 COPY --from=builder /app/* .
 
-RUN flask db upgrade
-
 ENV TZ=America/Sao_Paulo
+
+# RUN flask db upgrade
 
 CMD ["python", "main.py"]
