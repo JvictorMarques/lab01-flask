@@ -1,3 +1,9 @@
+## 0.1.2 (2024-10-09)
+
+### Fix
+
+- Improve Dockerfile pip install commands
+
 ## 0.1.1 (2024-10-05)
 
 ### Fix
