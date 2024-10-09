@@ -6,7 +6,7 @@ COPY requirements.txt .
 
 RUN pip install --upgrade pip \
     && pip install --upgrade setuptools wheel \
-    && pip install --no-cache-dir --upgrade -r requirements.txt
+    && pip install --no-cache-dir --upgrade -r requirements.txt 
 
 COPY . .
 
@@ -18,5 +18,7 @@ WORKDIR /app
 
 COPY --from=builder /usr/local/lib/python3.11/site-packages /usr/local/lib/python3.11/site-packages
 COPY --from=builder /app/* .
+
+# RUN flask db upgrade
 
 CMD ["python", "main.py"]
