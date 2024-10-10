@@ -32,4 +32,5 @@ ENV TZ=America/Sao_Paulo
 
 # RUN flask db upgrade
 # Teste
+
 CMD ["python", "main.py"]
