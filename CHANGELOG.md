@@ -1,3 +1,9 @@
+## 1.0.1 (2024-10-12)
+
+### Fix
+
+- Run database upgrade on container startup
+
 ## 1.0.0 (2024-10-10)
 
 ### BREAKING CHANGE
